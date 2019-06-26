@@ -11,6 +11,28 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%=link_to "Mi primera APP", pages_one_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <%=link_to "Pag Uno", pages_one_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%=link_to "Pag Dos", pages_two_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%=link_to "Pag Three", pages_three_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
   <body>
     <%= yield %>
   </body>
